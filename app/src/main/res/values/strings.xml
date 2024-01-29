@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Music Firebase</string>
+    <string name="my_music_app">My Music App</string>
+    <string name="categories">Categories</string>
+</resources>

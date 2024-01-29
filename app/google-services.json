@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "176807807248",
+    "project_id": "music-firebase-d52cb",
+    "storage_bucket": "music-firebase-d52cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176807807248:android:605b9c6af92e8c0618bd95",
+        "android_client_info": {
+          "package_name": "com.example.musicfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFJJOnJL_Z5kE7yOiJ2zxsPjap0CIcQ1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
