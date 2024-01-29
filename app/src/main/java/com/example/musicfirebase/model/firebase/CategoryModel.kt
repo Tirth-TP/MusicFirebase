@@ -6,6 +6,7 @@ package com.example.musicfirebase.model.firebase
 data class CategoryModel(
     val name: String,
     val coverUrl: String,
+    val song: List<String>
 ) {
-    constructor(): this("", "")
+    constructor(): this("", "", listOf())
 }
