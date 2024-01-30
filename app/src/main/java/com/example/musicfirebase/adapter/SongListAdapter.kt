@@ -1,6 +1,6 @@
 package com.example.musicfirebase.adapter
 
-import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +10,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.musicfirebase.databinding.ItemSongListBinding
 import com.example.musicfirebase.model.firebase.SongModel
 import com.example.musicfirebase.utils.MyExoplayer
+import com.example.musicfirebase.view.activity.PlayerActivity
 import com.google.firebase.firestore.FirebaseFirestore
 
 /**
@@ -34,7 +35,8 @@ class SongListAdapter(private val songIdList: List<String>) :
                         )
                             .into(binding.imgSongCover)
                         binding.root.setOnClickListener {
-                            MyExoplayer.startPlaying(binding.root.context,song)
+                            MyExoplayer.startPlaying(binding.root.context, song)
+                            it.context.startActivity(Intent(it.context, PlayerActivity::class.java))
                         }
                     }
                 }

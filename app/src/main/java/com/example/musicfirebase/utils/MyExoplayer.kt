@@ -19,12 +19,19 @@ object MyExoplayer {
     fun startPlaying(context: Context, song: SongModel) {
         if (exoplayer == null) exoplayer = ExoPlayer.Builder(context).build()
 
-        currentSong = song
-        currentSong?.url?.apply {
-            val mediaItem = MediaItem.fromUri(this)
-            exoplayer?.setMediaItem(mediaItem)
-            exoplayer?.prepare()
-            exoplayer?.play()
+        if (currentSong != song) {
+            currentSong = song
+            currentSong?.url?.apply {
+                val mediaItem = MediaItem.fromUri(this)
+                exoplayer?.setMediaItem(mediaItem)
+                exoplayer?.prepare()
+                exoplayer?.play()
+            }
         }
+
+    }
+
+    fun getCurrentSong(): SongModel? {
+        return currentSong
     }
 }
